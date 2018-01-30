@@ -1,0 +1,40 @@
+<div  ng-controller = "singleController">
+      <div class="container" ng-init = "loadSingleBlog()">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-preview">
+              <a >
+                <h2 class="post-title">
+                  {{blog.data.data.heading}}
+                 
+                </h2>
+                <h3 class="post-subtitle">
+                  {{blog.data.data.subHeading}}
+                </h3>
+                <p>
+                  {{blog.data.data.bodyHtml}}
+                </p>
+
+              </a>
+              <p class="post-meta">Posted by {{blog.data.data.author}}
+                <a href="#">Start Bootstrap</a>
+                on {{blog.data.data.created}}</p>
+
+                
+            </div>
+            <hr>
+            
+            <!-- Pager -->
+            
+          </div>
+
+        </div>
+        <div class="clearfix">
+              <a class="btn btn-primary float-right" href="#/">Go Back &rarr;</a>
+        </div>
+        <div class="clearfix">
+              <a class="btn btn-primary float-right" href="#/{{blog.data.data.blogId}}/edit">Edit &rarr;</a>
+        </div>
+      </div>
+  </div>  
+    <hr>

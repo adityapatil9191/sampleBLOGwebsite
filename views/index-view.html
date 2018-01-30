@@ -1,0 +1,41 @@
+<div  ng-controller = "mainController">
+      <div class="container"  ng-init = "getAllBlogs()" >
+        <div class="row"  ng-repeat = "blog in blogs.data.data">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-preview">
+              <a ng-click = "passValue(blog.blogId)" ng-href="#/blog/{{blog.blogId}}" >
+                <h2 class="post-title">
+                 {{blog.heading}}
+                </h2>
+                <h3 class="post-subtitle">
+                  {{blog.subHeading}}
+                </h3>
+              
+              <p class="post-meta">Posted by {{blog.author}}
+                <a href="#">Start Bootstrap</a>
+                on {{blog.created}}</p>
+                </a>
+
+               <div class="clearfix">
+                <a class="btn btn-primary float-right" ng-click = "deleteBlog($index)">Delete &rarr;</a>
+              </div>
+               
+            </div>
+            <hr>
+            
+            <!-- Pager -->
+            
+          </div>
+
+        </div>
+        <div class="clearfix">
+              <a class="btn btn-primary float-right" href="#/create">Create Blog &rarr;</a>
+        </div>
+        <hr>
+        <div class="clearfix">
+              <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+        </div>
+      </div>
+</div>  
+    <hr>
+
